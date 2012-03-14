@@ -178,6 +178,8 @@ public class GsonPrettyPrinter {
 		} else if (je.isJsonObject()) {
 			final JsonObject jsonObject = je.getAsJsonObject();
 			return objectToStringList(jsonObject);
+		} else if (je.isJsonNull()) {
+			Collections.singletonList("null");
 		}
 		throw new RuntimeException("Unsupported Json element: "+je.getClass().getName());
 	}
