@@ -4,7 +4,7 @@
   <groupId>com.uprizer.sensearray</groupId>
   <artifactId>freetools</artifactId>
   <packaging>jar</packaging>
-  <version>1.8</version>
+  <version>1.9</version>
   <name>freetools</name>
   <url>http://maven.apache.org</url>
   <build>
@@ -27,24 +27,20 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-	    <groupId>com.google.collections</groupId>
-	    <artifactId>google-collections</artifactId>
-	    <version>1.0</version>
-	</dependency>
-    <dependency>
   		<groupId>com.google.code.gson</groupId>
   		<artifactId>gson</artifactId>
   		<version>1.4</version>
   	</dependency>
+    <dependency>
+    	<groupId>com.google.guava</groupId>
+    	<artifactId>guava</artifactId>
+    	<version>13.0</version>
+    </dependency>
   </dependencies>
-  <distributionManagement>
-  	<downloadUrl>http://freetools.sensearray.com/</downloadUrl>
-	<repository>
-	   <uniqueVersion>false</uniqueVersion>
-	   <id>sensearray-freetools</id>
-	   <name>SenseArray FreeTools Maven Repository</name>
-	   <url>scp://freetools.sensearray.com/home/freetools/website</url>
-	   <layout>default</layout>
-	</repository>
-  </distributionManagement>
+	<distributionManagement>
+		<repository>
+			<id>gh-pages</id>
+			<url>file:///Users/ian/Documents/maven-repo/repository</url>
+		</repository>
+	</distributionManagement>
 </project>
