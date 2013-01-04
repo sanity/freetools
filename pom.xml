@@ -4,7 +4,7 @@
   <groupId>com.uprizer.sensearray</groupId>
   <artifactId>freetools</artifactId>
   <packaging>jar</packaging>
-  <version>1.10</version>
+  <version>1.12</version>
   <name>freetools</name>
   <url>http://maven.apache.org</url>
   <build>
@@ -13,8 +13,8 @@
   			<groupId>org.apache.maven.plugins</groupId>
   			<artifactId>maven-compiler-plugin</artifactId>
   			<configuration>
-  				<source>1.6</source>
-  				<target>1.6</target>
+  				<source>1.7</source>
+  				<target>1.7</target>
   			</configuration>
   		</plugin>
   	</plugins>
@@ -34,7 +34,7 @@
     <dependency>
     	<groupId>com.google.guava</groupId>
     	<artifactId>guava</artifactId>
-    	<version>13.0</version>
+    	<version>14.0-rc1</version>
     </dependency>
   </dependencies>
 	<distributionManagement>

@@ -1,10 +1,14 @@
 package com.uprizer.sensearray.freetools.json;
 
-import java.io.*;
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.util.*;
 import java.util.Map.Entry;
-
-import com.google.gson.*;
 
 /**
  * A decent pretty-printer for Gson. Features include:
@@ -179,8 +183,9 @@ public class GsonPrettyPrinter {
 			final JsonObject jsonObject = je.getAsJsonObject();
 			return objectToStringList(jsonObject);
 		} else if (je.isJsonNull()) {
-			Collections.singletonList("null");
-		}
-		throw new RuntimeException("Unsupported Json element: "+je.getClass().getName());
-	}
+			return Collections.singletonList("null");
+		} else {
+		    throw new RuntimeException("Unsupported Json element: "+je.getClass().getName());
+        }
+    }
 }
